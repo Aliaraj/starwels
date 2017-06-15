@@ -2624,8 +2624,8 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Specifica la cartella dati</translation>
     </message>
     <message>
-        <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
-        <translation>Attendi le connessioni su &lt;porta&gt; (predefinita: 8333 o testnet: 18333)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8353 or testnet: 18353)</source>
+        <translation>Attendi le connessioni su &lt;porta&gt; (predefinita: 8353 o testnet: 18353)</translation>
     </message>
     <message>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
@@ -2652,8 +2652,8 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Errore riscontrato durante l'impostazione della porta RPC %u per l'ascolto su IPv4: %s</translation>
     </message>
     <message>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (predefinita: 8332 or testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8352 or testnet: 18352)</source>
+        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (predefinita: 8352 or testnet: 18352)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
@@ -2836,8 +2836,8 @@ ad esempio: alertnotify=echo %%s | mail -s "Allarme Bitcoin" admin@foo.com
         <translation>Connetti attraverso SOCKS proxy</translation>
     </message>
     <message>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Connetti al JSON-RPC su &lt;port&gt; (predefinita: 8332 o testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8352 or testnet: 18352)</source>
+        <translation>Connetti al JSON-RPC su &lt;port&gt; (predefinita: 8352 o testnet: 18352)</translation>
     </message>
     <message>
         <source>Connection options:</source>
