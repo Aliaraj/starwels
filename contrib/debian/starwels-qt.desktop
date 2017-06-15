@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Starwels
+Comment=Starwels P2P Cryptocurrency
+Comment[fr]=Starwels, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Starwels, eşten eşe kriptografik sanal para birimi
+Exec=starwels-qt %u
+Terminal=false
+Type=Application
+Icon=starwels128
+MimeType=x-scheme-handler/starwels;
+Categories=Office;Finance;

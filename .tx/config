@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[bitcoin.tx]
-file_filter = src/qt/locale/bitcoin_<lang>.ts
-source_file = src/qt/locale/bitcoin_en.ts
+[starwels.tx]
+file_filter = src/qt/locale/starwels_<lang>.ts
+source_file = src/qt/locale/starwels_en.ts
 source_lang = en

@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a gitian build of Bitcoin using a Debian VM or physical system.*
+*Setup instructions for a gitian build of Starwels using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Bitcoin
+Gitian is the deterministic build process that is used to build the Starwels
 Core executables [1]. It provides a way to be reasonably sure that the
 executables are really built from source on github. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -11,7 +11,7 @@ the same, tested dependencies are used and statically built into the executable.
 Multiple developers build the source code by following a specific descriptor
 ("recipe"), cryptographically sign the result, and upload the resulting signature.
 These results are compared and only if they match, the build is accepted and uploaded
-to bitcoin.org.
+to localhost.
 
 More independent gitian builders are needed, which is why I wrote this
 guide. It is preferred to follow these steps yourself instead of using someone else's
@@ -29,7 +29,7 @@ Table of Contents
 - [Installing gitian](#installing-gitian)
 - [Setting up gitian images](#setting-up-gitian-images)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Bitcoin](#building-bitcoin)
+- [Building Starwels](#building-starwels)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -74,11 +74,11 @@ In the VirtualBox GUI click "Create" and choose the following parameters in the 
 - Disk size: at least 40GB; as low as 20GB *may* be possible, but better to err on the safe side 
 - Push the `Create` button
 
-Get the [Debian 7.4 net installer](http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso).
+Get the [Debian 8.x net installer](http://cdimage.debian.org/mirror/cdimage/archive/8.5.0/amd64/iso-cd/debian-8.5.0-amd64-netinst.iso).
 This DVD image can be validated using a SHA256 hashing tool, for example on
 Unixy OSes by entering the following in a terminal:
 
-    echo "b712a141bc60269db217d3b3e456179bd6b181645f90e4aac9c42ed63de492e9  /home/orion/Downloads/debian-7.4.0-amd64-netinst.iso" | sha256sum -c
+    echo "ad4e8c27c561ad8248d5ebc1d36eb172f884057bfeb2c22ead823f59fa8c3dff  debian-8.5.0-amd64-netinst.iso" | sha256sum -c
     # (must return OK)
 
 After creating the VM, we need to configure it. 
@@ -228,7 +228,7 @@ First we need to log in as `root` to set up dependencies and make sure that our
 user can use the sudo command. Type/paste the following in the terminal:
 
 ```bash
-apt-get install git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python-cheetah parted kpartx bridge-utils
+apt-get install git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python-cheetah parted kpartx bridge-utils make ubuntu-archive-keyring curl
 adduser debian sudo
 ```
 
@@ -279,11 +279,11 @@ cd ..
 
 **Note**: When sudo asks for a password, enter the password for the user *debian* not for *root*.
 
-Clone the git repositories for bitcoin and gitian,
+Clone the git repositories for starwels and gitian,
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/bitcoin/bitcoin
+git clone https://github.com/starwels/starwels
 ```
 
 Setting up gitian images
@@ -310,7 +310,7 @@ There will be a lot of warnings printed during build of the images. These can be
 Getting and building the inputs
 --------------------------------
 
-In [doc/release-process.md](release-process.md) in the bitcoin repository under 'Fetch and build inputs'.
+In [doc/release-process.md](release-process.md) in the starwels repository under 'Fetch and build inputs'.
 you will find a list of `wget` commands that can be executed to get the dependencies.
 
 I needed to add `--no-check-certificate` to the OpenSSL wget line to make it work.
@@ -332,20 +332,20 @@ tail -f var/install.log
 tail -f var/build.log
 ```
 
-Building Bitcoin
+Building Starwels
 ----------------
 
-To build Bitcoin (for Linux and/or Windows) just follow the steps under 'perform
-gitian builds' in [doc/release-process.md](release-process.md) in the bitcoin repository.
+To build Starwels (for Linux and/or Windows) just follow the steps under 'perform
+gitian builds' in [doc/release-process.md](release-process.md) in the starwels repository.
 
 Output from `gbuild` will look something like
 
-    Initialized empty Git repository in /home/debian/gitian-builder/inputs/bitcoin/.git/
+    Initialized empty Git repository in /home/debian/gitian-builder/inputs/starwels/.git/
     remote: Reusing existing pack: 35606, done.
     remote: Total 35606 (delta 0), reused 0 (delta 0)
     Receiving objects: 100% (35606/35606), 26.52 MiB | 4.28 MiB/s, done.
     Resolving deltas: 100% (25724/25724), done.
-    From https://github.com/bitcoin/bitcoin
+    From https://github.com/starwels/starwels
     ... (new tags, new branch etc)
     --- Building for precise i386 ---
     Stopping target if it is up
@@ -376,8 +376,8 @@ For example:
 ```bash
 URL=https://github.com/laanwj/bitcoin.git
 COMMIT=2014_03_windows_unicode_path
-./bin/gbuild --commit bitcoin=${COMMIT} --url bitcoin=${URL} ../bitcoin/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit bitcoin=${COMMIT} --url bitcoin=${URL} ../bitcoin/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit starwels=${COMMIT} --url starwels=${URL} ../starwels/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit starwels=${COMMIT} --url starwels=${URL} ../starwels/contrib/gitian-descriptors/gitian-win.yml
 ```
 
 Signing externally
@@ -392,8 +392,8 @@ When you execute `gsign` you will get an error from GPG, which can be ignored. C
 in `gitian.sigs` to your signing machine and do
 
 ```bash
-    gpg --detach-sign ${VERSION}/${SIGNER}/bitcoin-build.assert
-    gpg --detach-sign ${VERSION}-win/${SIGNER}/bitcoin-build.assert
+    gpg --detach-sign ${VERSION}/${SIGNER}/starwels-build.assert
+    gpg --detach-sign ${VERSION}-win/${SIGNER}/starwels-build.assert
 ```
 
 This will create the `.sig` files that can be committed together with the `.assert` files to assert your
@@ -404,7 +404,7 @@ Uploading signatures
 
 After building and signing you can push your signatures (both the `.assert` and
 `.assert.sig` files) to the
-[bitcoin/gitian.sigs](https://github.com/bitcoin/gitian.sigs/) repository, or
+[starwels/gitian.sigs](https://github.com/starwels/gitian.sigs/) repository, or
 if not possible create a pull request. You can also mail the files to me
 (laanwj@gmail.com) and I'll commit them.
 

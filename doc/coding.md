@@ -142,6 +142,6 @@ Threads
 
 - ThreadRPCServer : Remote procedure call handler, listens on port 8352 for connections and services them.
 
-- BitcoinMiner : Generates bitcoins (if wallet is enabled).
+- StarwelsMiner : Generates starwelss (if wallet is enabled).
 
 - Shutdown : Does an orderly shutdown of everything.

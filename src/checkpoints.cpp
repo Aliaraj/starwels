@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2014 The Bitcoin developers
+// Copyright (c) 2009-2014 The Starwels developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -39,7 +39,7 @@ namespace Checkpoints
     // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 2, uint256S("0x00000000858b8dd1b071fcd7d5456e89af4ca2718439171e23c5833f08fc383f")) // 5.000.050 AI
+        ( 2, uint256("0x00000000858b8dd1b071fcd7d5456e89af4ca2718439171e23c5833f08fc383f")) // 5.000.050 AI
 
         // hash: 00000000858b8dd1b071fcd7d5456e89af4ca2718439171e23c5833f08fc383f
         // target: 00000000ffff0000000000000000000000000000000000000000000000000000
@@ -48,12 +48,12 @@ namespace Checkpoints
         // CTxIn(COutPoint(0000000000, 4294967295), coinbase 520101062f503253482f)
         // CTxOut(nValue=5000050.00000000, scriptPubKey=026aaf455b33e31885a2477d81123e)
 
-        ( 1002, uint256S("0x000000002f0078f9431bfe30bb63c3bb980e969d6edb23d965626d6945563b2e"))
-        ( 3002, uint256S("0x00000000d18e53b72345a840d9fb941d583d1a88797e2655514186006c3ba571"))
-        ( 5002, uint256S("0x000000002a0a92b8ada17b2bcb002e513ca2e3dae40b8787ae7db6481cdeaca9"))
-        ( 20100, uint256S("0x0000000000012ea899078acd01332bb3fcb5d43003ebbdbd45d36f22c11f0ce5"))
-        ( 27000, uint256S("0x0000000000000039183ec560207ddb62a0423818b58cf8c0769181c772345b9a"))
-        ( 30110, uint256S("0x000000000000006cac231e6071dc71cd888df218ed1f85df9e2f2680ea9d1386"));
+        ( 1002, uint256("0x000000002f0078f9431bfe30bb63c3bb980e969d6edb23d965626d6945563b2e"))
+        ( 3002, uint256("0x00000000d18e53b72345a840d9fb941d583d1a88797e2655514186006c3ba571"))
+        ( 5002, uint256("0x000000002a0a92b8ada17b2bcb002e513ca2e3dae40b8787ae7db6481cdeaca9"))
+        ( 20100, uint256("0x0000000000012ea899078acd01332bb3fcb5d43003ebbdbd45d36f22c11f0ce5"))
+        ( 27000, uint256("0x0000000000000039183ec560207ddb62a0423818b58cf8c0769181c772345b9a"))
+        ( 30110, uint256("0x000000000000006cac231e6071dc71cd888df218ed1f85df9e2f2680ea9d1386"));
 
     static const CCheckpointData data = {
         // Data as of block 00000000000000001db7819d8906d5fef995793c38af5b43d1faf8236bd8307d (height 30200).
@@ -66,7 +66,7 @@ namespace Checkpoints
 
     static MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        ( 2, uint256S("000000003448a6673f6c17f0ebfd5684bfbc84b45d84a647621ec54cf53402f8"))
+        ( 2, uint256("000000003448a6673f6c17f0ebfd5684bfbc84b45d84a647621ec54cf53402f8"))
 
         // hash: 000000003448a6673f6c17f0ebfd5684bfbc84b45d84a647621ec54cf53402f8
         // target: 00000000ffff0000000000000000000000000000000000000000000000000000
@@ -75,8 +75,8 @@ namespace Checkpoints
         // CTxIn(COutPoint(0000000000, 4294967295), coinbase 520101062f503253482f)
         // CTxOut(nValue=5000050.00000000, scriptPubKey=0336a428acf796d4cf06d6fa39ee4d)
 
-        ( 102, uint256S("00000000e8106a3eb86478a75fd5944c4c4ac80a3e9ec4ae2402498f034bd60e"));
-        
+        ( 102, uint256("00000000e8106a3eb86478a75fd5944c4c4ac80a3e9ec4ae2402498f034bd60e"));
+
     static const CCheckpointData dataTestnet = {
         // Data as of block 00000000ebacf59e2fdc0377907a8b14ed81c181c9687de10755463935d92c5a (height 120)
         &mapCheckpointsTestnet,

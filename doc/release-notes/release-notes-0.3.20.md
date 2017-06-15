@@ -1,6 +1,6 @@
 Please checkout the git integration branch from:
 
-https://github.com/bitcoin/bitcoin
+https://github.com/starwels/starwels
 
 ... and help test.  The new features that need testing are:
 

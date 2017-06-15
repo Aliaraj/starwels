@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2013 The Bitcoin Core developers
+// Copyright (c) 2012-2013 The Starwels developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -55,10 +55,10 @@ bool static TestSplitHost(string test, string host, int port)
 
 BOOST_AUTO_TEST_CASE(netbase_splithost)
 {
-    BOOST_CHECK(TestSplitHost("www.bitcoin.org", "www.bitcoin.org", -1));
-    BOOST_CHECK(TestSplitHost("[www.bitcoin.org]", "www.bitcoin.org", -1));
-    BOOST_CHECK(TestSplitHost("www.bitcoin.org:80", "www.bitcoin.org", 80));
-    BOOST_CHECK(TestSplitHost("[www.bitcoin.org]:80", "www.bitcoin.org", 80));
+    BOOST_CHECK(TestSplitHost("localhost", "localhost", -1));
+    BOOST_CHECK(TestSplitHost("[localhost]", "localhost", -1));
+    BOOST_CHECK(TestSplitHost("localhost:80", "localhost", 80));
+    BOOST_CHECK(TestSplitHost("[localhost]:80", "localhost", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
     BOOST_CHECK(TestSplitHost("127.0.0.1:8353", "127.0.0.1", 8353));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));

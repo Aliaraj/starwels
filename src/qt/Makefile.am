@@ -5,84 +5,84 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = bitcoin-qt
-noinst_LIBRARIES = libbitcoinqt.a
+bin_PROGRAMS = starwels-qt
+noinst_LIBRARIES = libstarwelsqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# bitcoin qt core #
+# starwels qt core #
 QT_TS = \
-  locale/bitcoin_ach.ts \
-  locale/bitcoin_af_ZA.ts \
-  locale/bitcoin_ar.ts \
-  locale/bitcoin_be_BY.ts \
-  locale/bitcoin_bg.ts \
-  locale/bitcoin_bs.ts \
-  locale/bitcoin_ca_ES.ts \
-  locale/bitcoin_ca.ts \
-  locale/bitcoin_ca@valencia.ts \
-  locale/bitcoin_cmn.ts \
-  locale/bitcoin_cs.ts \
-  locale/bitcoin_cy.ts \
-  locale/bitcoin_da.ts \
-  locale/bitcoin_de.ts \
-  locale/bitcoin_el_GR.ts \
-  locale/bitcoin_en.ts \
-  locale/bitcoin_eo.ts \
-  locale/bitcoin_es_CL.ts \
-  locale/bitcoin_es_DO.ts \
-  locale/bitcoin_es_MX.ts \
-  locale/bitcoin_es.ts \
-  locale/bitcoin_es_UY.ts \
-  locale/bitcoin_et.ts \
-  locale/bitcoin_eu_ES.ts \
-  locale/bitcoin_fa_IR.ts \
-  locale/bitcoin_fa.ts \
-  locale/bitcoin_fi.ts \
-  locale/bitcoin_fr_CA.ts \
-  locale/bitcoin_fr.ts \
-  locale/bitcoin_gl.ts \
-  locale/bitcoin_gu_IN.ts \
-  locale/bitcoin_he.ts \
-  locale/bitcoin_hi_IN.ts \
-  locale/bitcoin_hr.ts \
-  locale/bitcoin_hu.ts \
-  locale/bitcoin_id_ID.ts \
-  locale/bitcoin_it.ts \
-  locale/bitcoin_ja.ts \
-  locale/bitcoin_ka.ts \
-  locale/bitcoin_kk_KZ.ts \
-  locale/bitcoin_ko_KR.ts \
-  locale/bitcoin_ky.ts \
-  locale/bitcoin_la.ts \
-  locale/bitcoin_lt.ts \
-  locale/bitcoin_lv_LV.ts \
-  locale/bitcoin_mn.ts \
-  locale/bitcoin_ms_MY.ts \
-  locale/bitcoin_nb.ts \
-  locale/bitcoin_nl.ts \
-  locale/bitcoin_pam.ts \
-  locale/bitcoin_pl.ts \
-  locale/bitcoin_pt_BR.ts \
-  locale/bitcoin_pt_PT.ts \
-  locale/bitcoin_ro_RO.ts \
-  locale/bitcoin_ru.ts \
-  locale/bitcoin_sah.ts \
-  locale/bitcoin_sk.ts \
-  locale/bitcoin_sl_SI.ts \
-  locale/bitcoin_sq.ts \
-  locale/bitcoin_sr.ts \
-  locale/bitcoin_sv.ts \
-  locale/bitcoin_th_TH.ts \
-  locale/bitcoin_tr.ts \
-  locale/bitcoin_uk.ts \
-  locale/bitcoin_ur_PK.ts \
-  locale/bitcoin_uz@Cyrl.ts \
-  locale/bitcoin_vi.ts \
-  locale/bitcoin_vi_VN.ts \
-  locale/bitcoin_zh_CN.ts \
-  locale/bitcoin_zh_HK.ts \
-  locale/bitcoin_zh_TW.ts
+  locale/starwels_ach.ts \
+  locale/starwels_af_ZA.ts \
+  locale/starwels_ar.ts \
+  locale/starwels_be_BY.ts \
+  locale/starwels_bg.ts \
+  locale/starwels_bs.ts \
+  locale/starwels_ca_ES.ts \
+  locale/starwels_ca.ts \
+  locale/starwels_ca@valencia.ts \
+  locale/starwels_cmn.ts \
+  locale/starwels_cs.ts \
+  locale/starwels_cy.ts \
+  locale/starwels_da.ts \
+  locale/starwels_de.ts \
+  locale/starwels_el_GR.ts \
+  locale/starwels_en.ts \
+  locale/starwels_eo.ts \
+  locale/starwels_es_CL.ts \
+  locale/starwels_es_DO.ts \
+  locale/starwels_es_MX.ts \
+  locale/starwels_es.ts \
+  locale/starwels_es_UY.ts \
+  locale/starwels_et.ts \
+  locale/starwels_eu_ES.ts \
+  locale/starwels_fa_IR.ts \
+  locale/starwels_fa.ts \
+  locale/starwels_fi.ts \
+  locale/starwels_fr_CA.ts \
+  locale/starwels_fr.ts \
+  locale/starwels_gl.ts \
+  locale/starwels_gu_IN.ts \
+  locale/starwels_he.ts \
+  locale/starwels_hi_IN.ts \
+  locale/starwels_hr.ts \
+  locale/starwels_hu.ts \
+  locale/starwels_id_ID.ts \
+  locale/starwels_it.ts \
+  locale/starwels_ja.ts \
+  locale/starwels_ka.ts \
+  locale/starwels_kk_KZ.ts \
+  locale/starwels_ko_KR.ts \
+  locale/starwels_ky.ts \
+  locale/starwels_la.ts \
+  locale/starwels_lt.ts \
+  locale/starwels_lv_LV.ts \
+  locale/starwels_mn.ts \
+  locale/starwels_ms_MY.ts \
+  locale/starwels_nb.ts \
+  locale/starwels_nl.ts \
+  locale/starwels_pam.ts \
+  locale/starwels_pl.ts \
+  locale/starwels_pt_BR.ts \
+  locale/starwels_pt_PT.ts \
+  locale/starwels_ro_RO.ts \
+  locale/starwels_ru.ts \
+  locale/starwels_sah.ts \
+  locale/starwels_sk.ts \
+  locale/starwels_sl_SI.ts \
+  locale/starwels_sq.ts \
+  locale/starwels_sr.ts \
+  locale/starwels_sv.ts \
+  locale/starwels_th_TH.ts \
+  locale/starwels_tr.ts \
+  locale/starwels_uk.ts \
+  locale/starwels_ur_PK.ts \
+  locale/starwels_uz@Cyrl.ts \
+  locale/starwels_vi.ts \
+  locale/starwels_vi_VN.ts \
+  locale/starwels_zh_CN.ts \
+  locale/starwels_zh_HK.ts \
+  locale/starwels_zh_TW.ts
 
 QT_FORMS_UI = \
   forms/aboutdialog.ui \
@@ -107,10 +107,10 @@ QT_MOC_CPP = \
   moc_addressbookpage.cpp \
   moc_addresstablemodel.cpp \
   moc_askpassphrasedialog.cpp \
-  moc_bitcoinaddressvalidator.cpp \
-  moc_bitcoinamountfield.cpp \
-  moc_bitcoingui.cpp \
-  moc_bitcoinunits.cpp \
+  moc_starwelsaddressvalidator.cpp \
+  moc_starwelsamountfield.cpp \
+  moc_starwelsgui.cpp \
+  moc_starwelsunits.cpp \
   moc_clientmodel.cpp \
   moc_coincontroldialog.cpp \
   moc_coincontroltreewidget.cpp \
@@ -148,31 +148,31 @@ QT_MOC_CPP = \
   moc_walletmodel.cpp \
   moc_walletview.cpp
 
-BITCOIN_MM = \
+STARWELS_MM = \
   macdockiconhandler.mm \
   macnotificationhandler.mm
 
 QT_MOC = \
-  bitcoin.moc \
+  starwels.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_bitcoin.cpp
-QT_QRC = bitcoin.qrc
+QT_QRC_CPP = qrc_starwels.cpp
+QT_QRC = starwels.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
 PROTOBUF_PROTO = paymentrequest.proto
 
-BITCOIN_QT_H = \
+STARWELS_QT_H = \
   addressbookpage.h \
   addresstablemodel.h \
   askpassphrasedialog.h \
-  bitcoinaddressvalidator.h \
-  bitcoinamountfield.h \
-  bitcoingui.h \
-  bitcoinunits.h \
+  starwelsaddressvalidator.h \
+  starwelsamountfield.h \
+  starwelsgui.h \
+  starwelsunits.h \
   clientmodel.h \
   coincontroldialog.h \
   coincontroltreewidget.h \
@@ -218,10 +218,10 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   res/icons/add.png \
   res/icons/address-book.png \
-  res/icons/bitcoin.ico \
-  res/icons/bitcoin.png \
-  res/icons/bitcoin_testnet.ico \
-  res/icons/bitcoin_testnet.png \
+  res/icons/starwels.ico \
+  res/icons/starwels.png \
+  res/icons/starwels_testnet.ico \
+  res/icons/starwels_testnet.png \
   res/icons/clock1.png \
   res/icons/clock2.png \
   res/icons/clock3.png \
@@ -260,12 +260,12 @@ RES_ICONS = \
   res/icons/tx_output.png \
   res/icons/tx_mined.png
 
-BITCOIN_QT_CPP = \
-  bitcoin.cpp \
-  bitcoinaddressvalidator.cpp \
-  bitcoinamountfield.cpp \
-  bitcoingui.cpp \
-  bitcoinunits.cpp \
+STARWELS_QT_CPP = \
+  starwels.cpp \
+  starwelsaddressvalidator.cpp \
+  starwelsamountfield.cpp \
+  starwelsgui.cpp \
+  starwelsunits.cpp \
   clientmodel.cpp \
   csvmodelwriter.cpp \
   guiutil.cpp \
@@ -283,7 +283,7 @@ BITCOIN_QT_CPP = \
   winshutdownmonitor.cpp
 
 if ENABLE_WALLET
-BITCOIN_QT_CPP += \
+STARWELS_QT_CPP += \
   addressbookpage.cpp \
   addresstablemodel.cpp \
   askpassphrasedialog.cpp \
@@ -319,40 +319,40 @@ RES_IMAGES = \
 
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-BITCOIN_RC = res/bitcoin-qt-res.rc
+STARWELS_RC = res/starwels-qt-res.rc
 
-libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libstarwelsqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libstarwelsqt_a_SOURCES = $(STARWELS_QT_CPP) $(STARWELS_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 
-nodist_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libstarwelsqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libbitcoinqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libstarwelsqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# bitcoin-qt binary #
-bitcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# starwels-qt binary #
+starwels_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-bitcoin_qt_SOURCES = bitcoin.cpp
+starwels_qt_SOURCES = starwels.cpp
 if TARGET_DARWIN
-  bitcoin_qt_SOURCES += $(BITCOIN_MM)
+  starwels_qt_SOURCES += $(STARWELS_MM)
 endif
 if TARGET_WINDOWS
-  bitcoin_qt_SOURCES += $(BITCOIN_RC)
+  starwels_qt_SOURCES += $(STARWELS_RC)
 endif
-bitcoin_qt_LDADD = libbitcoinqt.a $(LIBBITCOIN_SERVER)
+starwels_qt_LDADD = libstarwelsqt.a $(LIBSTARWELS_SERVER)
 if ENABLE_WALLET
-bitcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+starwels_qt_LDADD += $(LIBSTARWELS_WALLET)
 endif
-bitcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+starwels_qt_LDADD += $(LIBSTARWELS_CLI) $(LIBSTARWELS_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-bitcoin_qt_LDFLAGS = $(QT_LDFLAGS)
+starwels_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -363,15 +363,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-bitcoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/bitcoinstrings.cpp
+starwelsstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/starwelsstrings.cpp
 
-translate: bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: starwelsstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(STARWELS_QT_CPP) $(STARWELS_QT_H) $(STARWELS_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/bitcoin_en.ts
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/starwels_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name starwels -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}
